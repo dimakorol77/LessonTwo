@@ -90,7 +90,7 @@ public class Test {
 //В массиве найти максимальный элемент с четным индексом
 
 
-//        public static void main(String[] args) {
+    //        public static void main(String[] args) {
 //            Random rand = new Random();
 //            int[] array = new int[15];
 //
@@ -123,29 +123,49 @@ public class Test {
 //            System.out.println("\nМаксимальный элемент: " + maxElement);
 //            System.out.println("Максимальный элемент с четным индексом: " + maxEvenIndexElement);
 //        }
-public static void main(String[] args) {
-    int min = 0;
-    int max = 100;
+//public static void main(String[] args) {
+//    int min = 0;
+//    int max = 100;
+//
+//    int maxNumber = 0;
+//    int maxEvenNumber = 0;
+//
+//    int[] randomArr = new int[15];
+//    Random random = new Random();
+//    for (int i = 0; i < randomArr.length; i++) {
+//        randomArr[i]  = random.nextInt(55);
+//
+//        if (randomArr[i] > maxNumber) {
+//            maxNumber = randomArr[i];
+//        }
+//        if ((i % 2 ==0) && (randomArr[i] > maxEvenNumber)) {
+//            maxEvenNumber = randomArr[i];
+//        }
+//    }
+//    System.out.println(Arrays.toString(randomArr));
+//    System.out.println("Max number:" + maxNumber);
+//    System.out.println("Max even: " + maxEvenNumber);
+//}
 
-    int maxNumber = 0;
-    int maxEvenNumber = 0;
+        // Рекурсивный метод для нахождения n-го числа Фибоначчи
 
-    int[] randomArr = new int[15];
-    Random random = new Random();
-    for (int i = 0; i < randomArr.length; i++) {
-        randomArr[i]  = random.nextInt(55);
+            // Рекурсивный метод для нахождения n-го числа Фибоначчи
+            public static int fibonacci(int n) {
+                System.out.println("Вызов функции fibonacci(" + n + ")");
+                if (n <= 1) {
+                    System.out.println("Возврат: " + n);
+                    return n;  // Базовый случай: 0 или 1 возвращает само значение n
+                }
+                int result = fibonacci(n - 1) + fibonacci(n - 2);  // Рекурсивный вызов
+                System.out.println("Возврат: fibonacci(" + (n - 1) + ") + fibonacci(" + (n - 2) + ") = " + result);
+                return result;
+            }
 
-        if (randomArr[i] > maxNumber) {
-            maxNumber = randomArr[i];
+            public static void main(String[] args) {
+                 // Ищем 10-е число Фибоначчи
+                System.out.println("10-е число Фибоначчи: " + fibonacci(7));
+            }
         }
-        if ((i % 2 ==0) && (randomArr[i] > maxEvenNumber)) {
-            maxEvenNumber = randomArr[i];
-        }
-    }
-    System.out.println(Arrays.toString(randomArr));
-    System.out.println("Max number:" + maxNumber);
-    System.out.println("Max even: " + maxEvenNumber);
-}
 
 
 
@@ -157,7 +177,7 @@ public static void main(String[] args) {
 
 
 
-}
+
 
 
 
